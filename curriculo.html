@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículo - Sandokam Bussola</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <span class="dot"></span>
+        <strong class="role">Sandokam Bussola</strong>
+        <span class="role">Analista de Dados</span>
+    </div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="portfolio.html">Projetos</a>
+        <a href="#">Contato</a>
+    </nav>
+</header>
+
+<div class="curriculo-container">
+
+    <!-- MENU LATERAL -->
+    <aside class="menu-lateral">
+        <ul>
+            <li data-target="formacao">Formação</li>
+            <li data-target="experiencia">Experiência</li>
+            <li data-target="habilidades">Habilidades</li>
+            <li data-target="cursos">Cursos</li>
+            <li data-target="idiomas">Idiomas</li>
+        </ul>
+
+          <div class="button">
+        <a href="arquivos/curriculo.pdf" download class="btn-download">Download Currículo</a>
+         </div>
+    </aside>
+
+  
+    <!-- ÁREA PRINCIPAL -->
+    <main class="conteudo">
+
+        <!-- CARD PRINCIPAL (FOTO) -->
+        <div class="card">
+            <img src="arquivos/san.jpeg" alt="San Bussola">
+            <h2>Sandokam Bussola</h2>
+            <p class="card-role">Analista de Dados | Inteligência Comercial | BI | Front End</p>
+        </div>
+
+        <!-- SEÇÕES DE INFORMAÇÃO -->
+        <div class="info" id="formacao">
+            <h3>Formação</h3>
+            <li> Pós-graduação cursando em Business Intelligence, Big Data e Analytics -Ciência de Dados – Faculdade Líbano</li> 
+              <li>Graduação completa em Análise e Desenvolvimento de Sistemas – Senac 2025</li>
+        </div>
+
+        <div class="info" id="experiencia">
+            <h3>Experiência</h3>
+            <br>
+            <li> <strong>Assistente comercial - Senac Santa Catarina 2022 - 2025</strong>
+                <br>
+              Atendimento ao cliente e vendas de cursos de graduação, organização e execução de eventos, estratégias comerciais e 
+              promoções B2B e B2C, e-commerce, SDR e pós-venda. Experiência em geração de dashboards comerciais e 
+              acompanhamento de performance de leads, utilizando ferramentas como Bitrix24, Power BI, Excel, Trello e Loop 
+              para suporte à tomada de decisões e otimização de resultados.  
+            </li>
+            <br>
+            <br>
+            <li> <strong>Assistente Comercial - Absolute Marketing Eirelli - 2020 - 2021</strong>
+            <br>
+            Prospecção de clientes para investimentos em Bolsa de Valores e corretoras internacionais, com venda de 
+            softwares e serviços financeiros. Experiência em acompanhamento de funil de vendas e performance de leads, 
+            utilizando CRM Bitrix24 e Excel para geração de relatórios e dashboards de suporte à tomada de decisão comercial</li>
+            <br>
+            <br>
+            <li> <strong>Compras/Caixa - Santilina Restaurante - 2017 - 2020</strong>
+            <br>
+            Atendimento ao público e operação de caixa, gestão de compras, estoque e logística, 
+            negociação com fornecedores e controle de custos e indicadores em planilhas, com apoio à organização 
+            administrativa.</li>
+        </div>
+
+        <div class="info" id="habilidades">
+            <h3>Habilidades</h3>
+            <li>Comercial:
+                Vendas (15 anos) | SDR (6 anos) | B2B, B2C e B2G | Estratégia Comercial | Pós-venda | Negociação</li>
+                <br>
+                <br>
+                <li>Dados & Tecnologia:
+                Python (3 anos) | SQL (2 anos) | Power BI | Dashboards | Data Warehouse | Modelagem de Dados</li>
+                <br>
+                <br>
+                <li>Desenvolvimento:
+                HTML | CSS | JavaScript | Django | Spring Boot | Node</li>
+                <br>
+                <br>
+                <li>Gestão & Operações:
+                Planejamento Estratégico | Gestão de Compras | ERP (TOTVS) | Gestão de Estoques | Logística</li>
+        </div>
+
+        <div class="info" id="cursos">
+            <h3>Cursos</h3>
+            <br>
+            <li>Bradesco2026 – GenAI & Dados</li>
+            <br>
+            <li>Open Academy Santander 2025 - Ciência de Dados com Python</li>
+            <br>
+            <li>Cisco 2024 – Introdução a Cyber Segurança.</li>
+            <br>
+            <li>Instituto de Pesquisa Eldorado 2024 - Práticas de Cloud Services usando Swift com ênfase em Serviços </li>
+            <br>
+            <li>Instituto de Pesquisa Eldorado 2024 - Conceitos e Fundamentos: Algoritmos e Programação Orientada a Objetos com Swift</li>
+</li>
+        </div>
+
+        <div class="info" id="idiomas">
+            <h3>Idiomas</h3>
+            <br>
+            <li>Inglês B2.2 - Conversação/ Leitura/ Escrita</li>
+            <br>
+            <li>Espanhol B2.2 - Conversação/ Leitura/ Escrita</li>
+            <br>
+            <li>Alemão A2 - Conversação / Leitura</li>
+            <br>
+            <li>Italiano A1.2 - Conversação / Leitura</li>
+            <br>
+            <li>Sueco A1 - Conversação </li>
+        </div>
+
+    </main>
+</div>
+
+<script>
+const menuItems = document.querySelectorAll('.menu-lateral li');
+const infos = document.querySelectorAll('.info');
+const card = document.querySelector('.conteudo .card');
+
+menuItems.forEach(item => {
+    item.addEventListener('click', () => {
+        const target = item.getAttribute('data-target');
+        infos.forEach(info => {
+            if(info.id === target){
+                const isActive = info.classList.contains('active');
+                infos.forEach(i => i.classList.remove('active'));
+                card.classList.remove('transparent');
+
+                if(!isActive){
+                    info.classList.add('active');
+                    card.classList.add('transparent'); 
+                }
+            } else {
+                info.classList.remove('active');
+            }
+        });
+    });
+});
+
+document.addEventListener('click', (e) => {
+    infos.forEach(info => {
+        if(info.classList.contains('active') && !info.contains(e.target) && !e.target.closest('.menu-lateral li')){
+            info.classList.remove('active');
+            card.classList.remove('transparent');
+        }
+    });
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,408 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #f4f1ec; /* branco quente */
+    color: #84807c;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 60px;
+    background: #6b5e52;
+    border-bottom: 1px solid #c5bcad; /* linha sutil */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background: #d8cfc4; 
+}
+
+.role {
+    color: #ffffff;
+    font-size: 14px;
+    margin-left: 8px;
+}
+
+nav a {
+    margin-left: 30px;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #6b5e52;
+}
+
+/* HERO */
+.hero {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    min-height: auto;
+}
+
+/* LADO ESQUERDO */
+.left-side {
+    background: #d8cfc4; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+/* CARD */
+.card {
+    background: #ffffff;
+    padding: 50px 40px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+.card img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 25px;
+}
+
+.card h2 {
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.card-role {
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #6b5e52;
+}
+
+/* LADO DIREITO */
+.right-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+    padding: 60px;
+}
+
+.right-side h1 {
+    font-size: 52px;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.subtitle {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #6f6a63;
+}
+
+/* BOTÕES */
+.buttons {
+    margin-bottom: 35px;
+}
+
+.buttons a {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 14px;
+    margin-right: 15px;
+    transition: 0.3s ease;
+}
+
+/* botão principal*/
+.btn-primary {
+    background: #6b5e52;
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background: #574c43;
+}
+
+/* botão outline */
+.btn-outline {
+    border: 1px solid #6b5e52;
+    color: #6b5e52;
+}
+
+.btn-outline:hover {
+    background: #6b5e52;
+    color: #ffffff;
+}
+
+/* TEXTO SOBRE */
+.about {
+    max-width: 720px;
+    line-height: 1.4;
+    color: #5c5751;
+    font-size: 15px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 900px) {
+    .hero {
+        grid-template-columns: 1fr;
+    }
+
+    .left-side {
+        min-height: 50vh;
+    }
+
+    .right-side {
+        padding: 50px 30px;
+    }
+}
+
+/* ===========================
+   CURRÍCULO - CONTAINER
+   =========================== */
+.curriculo-container {
+    display: flex;
+    min-height: calc(100vh - 110px);
+    
+}
+
+/* ===========================
+   MENU LATERAL
+   =========================== */
+.menu-lateral {
+    position: relative;
+    padding: 30px 0 0 40px;
+    bottom: 0;
+}
+
+
+
+.menu-lateral ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.menu-lateral li {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 12px 20px;
+    border-radius: 14px;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+    font-weight: 500;
+    color: #6b5e52;
+}
+
+.menu-lateral li:hover {
+    background: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(6px);
+    transform: translateX(5px);
+    color: #574c43;
+}
+
+/* ===========================
+   ÁREA DE CONTEÚDO
+   =========================== */
+.conteudo {
+    margin-left: 200px; /* espaço do menu */
+    padding: 80px;
+    flex: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* card à direita */
+}
+
+/* ===========================
+   CARD
+   =========================== */
+.conteudo .card {
+    background: #ffffff;
+    padding: 50px 40px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+    transition: opacity 0.3s;
+    margin-bottom: 30px;
+}
+
+/* ===========================
+   FAIXA MARROM ATRÁS DO CARD
+   =========================== */
+.conteudo::before {
+    content: "";
+    position: absolute;
+    right: 0;          
+    top: 0;
+    width: 500px;     
+    bottom: 0;      
+    background: #d8cfc4; 
+    z-index: 0;       
+    
+}
+
+/* garantir que o card fique acima da faixa */
+.conteudo .card {
+    position: relative;
+    z-index: 1;
+}
+
+
+.conteudo .card img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 25px;
+}
+
+.conteudo .card h2 {
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.conteudo .card-role {
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #6b5e52;
+}
+
+.conteudo .card.transparent {
+    opacity: 0.3;
+}
+
+/* BOTÃO */
+
+.menu-lateral .button {
+    display: block;
+    margin-top: 30px;  
+}
+
+.menu-lateral .button a {
+    display: block;
+    padding: 12px 28px;
+    border-radius: 10px;
+    background: #6b5e52;
+    color: #fff;
+    text-decoration: none;
+}
+
+
+
+.button a {
+    display: inline-block;
+    padding: 12px 10px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 14px;
+    margin-right:10px;
+    transition: 0.3s ease;
+    margin-left: px;
+}
+
+.btn-download {
+    background: #6b5e52;
+    color: #ffffff;
+}
+
+.btn-download:hover {
+    background: #574c43;
+}
+
+/* ===========================
+   SEÇÕES DE INFORMAÇÃO
+   =========================== */
+.info {
+    display: none;
+    position: fixed;
+    top: 50%;      /* verticalmente centralizado */
+    left: 50%;     /* centraliza horizontalmente */
+    transform: translate(-50%, -50%);
+    background: #fff; /* fundo do popup */
+    padding: 30px 40px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+    z-index: 10;  /* popup acima do card */
+    text-align: center;
+}
+
+.info.active {
+    display: block;
+    
+}
+/* ===========================
+   CARD
+   =========================== */
+.conteudo .card {
+    background: #ffffff;
+    padding: 50px 40px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+    position: relative;
+    z-index: 5; /* abaixo da info */
+    transition: opacity 0.5s;
+}
+.conteudo .card.transparent {
+    opacity: 0.3; /* só o card fica transparente */
+    z-index: 1;   /* garante que o card fique atrás do popup */
+}
+
+
+.conteudo.show-info .card {
+    opacity: 0.3;
+     
+}
+
+/* ===========================
+   RESPONSIVO
+   =========================== */
+@media (max-width: 900px) {
+    .curriculo-container {
+        flex-direction: column;
+    }
+
+    .menu-lateral {
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 20px 0;
+    }
+
+    .menu-lateral ul {
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .conteudo {
+        margin-left: 0;
+        padding: 20px;
+        align-items: center;
+    }
+}
+
