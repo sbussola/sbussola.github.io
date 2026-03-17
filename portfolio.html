@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projetos - Sandokam Bussola</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="pagina">
+
+
+<header>
+    <div class="logo">
+        <span class="dot"></span>
+        <strong class="role">Sandokam Bussola</strong>
+        <span class="role">Analista de Dados</span>
+    </div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="curriculo.html">Currículo</a>
+        <a href="contato.html">Contato</a>
+    </nav>
+</header>
+
+<section class="hero">
+
+
+
+<div class="left-side">
+
+<div class="card">
+<img src="arquivos/san3.jpeg" alt="San Bussola">
+
+<h2>Sandokam Bussola</h2>
+
+<p class="card-role">
+Analista de Dados | Inteligência Comercial | Business Intelligence | Front End
+</p>
+</div>
+
+</div>
+
+
+<section class="projetos-editorial">
+
+    <div class="projetos-header">
+        <h1>Projetos</h1>
+        <p>
+            Nesta seção apresento projetos desenvolvidos com foco em análise de dados,
+            visualização e desenvolvimento front-end. Cada projeto detalha o problema,
+            abordagem técnica, ferramentas utilizadas e principais resultados, e apresenta algumas desenvolturas e conhecimentos
+            tecnológicos.
+        </p>
+    </div>
+
+<div class="projetos-lista">
+
+    <!-- 01 -->
+    <div class="projeto">
+        <div class="projeto-topo">
+            <span class="numero">01</span>
+            <div>
+                <h2>Billboard Data Analysis</h2>
+                <p class="stack">Python • Pandas • Matplotlib • Seaborn</p>
+            </div>
+        </div>
+
+        <div class="projeto-conteudo">
+            <p>Análise exploratória dos rankings da Billboard para identificar padrões de 
+                permanência e tendências por gênero musical.</p>
+            <a href="https://github.com/SBussola/Projeto_Billboard_Hot_100_Analysis.git" class="link-projeto" target="_blank">Ver Projeto</a>
+        </div>
+    </div>
+
+    <!-- 02 -->
+    <div class="projeto">
+        <div class="projeto-topo">
+            <span class="numero">02</span>
+            <div>
+                <h2>Chatbot com IA usando n8n e Groq e registro em nuvem</h2>
+                <p class="stack">N8N • Groq • API • LLM  • Workflow • Google Sheets • Nuvem </p>
+            </div>
+        </div>
+
+        <div class="projeto-conteudo">
+            <p>Desenvolvimento de um chatbot automatizado utilizando n8n para orquestração de workflows e integração com modelos de linguagem via API da Groq. 
+                O sistema recebe mensagens dos usuários, envia as solicitações para processamento por IA e retorna respostas automaticamente. Todas as interações 
+                são registradas em Google Sheets, 
+                permitindo armazenamento em nuvem e histórico completo das conversas para análise e monitoramento.</p>
+            <a href="https://sandokam.app.n8n.cloud/webhook/9d02dc88-f5d0-4274-9294-65747c4b0cc8/chat" class="link-projeto"  target="_blank">Link Chatbot</a>
+            <br/>
+            <a href="https://github.com/SBussola/n8n-ai-chatbot" class="link-projeto"  target="_blank">Link Projeto Git</a>
+        </div>
+    </div>
+
+<!-- 03 -->
+<div class="projeto">
+    <div class="projeto-topo">
+        <span class="numero">03</span>
+        <div>
+            <h2>Dashboard Comercial Power BI</h2>
+            <p class="stack">Excel • Power BI • DAX • Modelagem</p>
+        </div>
+    </div>
+
+    <div class="projeto-conteudo">
+        <p>
+            Dashboard comercial desenvolvido em Power BI, focado em análise de vendas, faturamento e performance regional. 
+            Inclui KPIs estratégicos, visualizações interativas e métricas dinâmicas, permitindo insights rápidos e suporte à 
+            tomada de decisão.
+        </p>
+        <a href="https://github.com/SBussola/Dashboard_Comercial_Ficticio" class="link-projeto"  target="_blank">CLIQUE AQUI, para ver as explicações do Projeto</a>
+
+        <iframe 
+            title="analise_comercial_ficticio"
+            width="120%"
+            height="530"
+            src="https://app.powerbi.com/view?r=eyJrIjoiNzVlZWYyZjQtNjdhMi00Y2E2LWFjZWQtNWU5MzY4Y2E3N2M1IiwidCI6IjA5MTdmZTEwLTU2ZGItNDRiZi1iMWM1LTMxMDYxYWIyMWNmOSJ9"
+            frameborder="0"
+            allowFullScreen="true">
+        </iframe>
+
+    </div>
+</div>
+
+
+</section>
+
+<script>
+const projetos = document.querySelectorAll(".projeto");
+
+projetos.forEach(projeto => {
+    projeto.querySelector(".projeto-topo").addEventListener("click", () => {
+
+        const aberto = projeto.classList.contains("ativo");
+
+        projetos.forEach(p => p.classList.remove("ativo"));
+
+        if (!aberto) {
+            projeto.classList.add("ativo");
+        }
+    });
+});
+</script>
+
+</body>
+</html>
