@@ -1,5 +1,5 @@
 /* ===================================================== */
-/* ======================== HOME ====================== */
+/* ======================== RESET ====================== */
 /* ===================================================== */
 
 * {
@@ -8,15 +8,17 @@
     box-sizing: border-box;
 }
 
+/* ===================================================== */
+/* ======================== BASE ======================= */
+/* ===================================================== */
+
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     background-color: #f4f1ec;
-    color: #84807c;
-    overflow-x: hidden; /* evita expansão lateral */
+    color: #7c4d1f;
+    overflow-x: hidden;
     font-size: 18px;
-    
 }
-
 
 /* ===================================================== */
 /* ======================== HEADER ===================== */
@@ -28,7 +30,7 @@ header {
     align-items: center;
     padding: 25px 60px;
     background: #6b5e52;
-    border-bottom: 1px solid #c5bcad;
+    border-bottom: 1px solid #f1d6a7;
 }
 
 .logo {
@@ -49,8 +51,12 @@ header {
     margin-left: 8px;
 }
 
+nav {
+    display: flex;
+    gap: 30px;
+}
+
 nav a {
-    margin-left: 30px;
     text-decoration: none;
     color: #ffffff;
     font-size: 18px;
@@ -61,7 +67,6 @@ nav a:hover {
     opacity: 0.7;
 }
 
-
 /* ===================================================== */
 /* ======================== HERO ======================= */
 /* ===================================================== */
@@ -69,24 +74,27 @@ nav a:hover {
 .hero {
     display: grid;
     grid-template-columns: 40% 60%;
-    min-height: calc(100vh - 90px);
+    min-height: 100dvh;
 }
 
 .left-side {
     background: #d8cfc4;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
-    padding: 40px;
+    padding-top: 100px;
+
 }
 
 .card {
     background: #ffffff;
-    padding: 60px 50px;
-    width: 380px;
+    padding: 50px 40px;
+    width: 300px;
+
     text-align: center;
     box-shadow: 0 20px 40px rgba(0,0,0,0.08);
     transition: 0.3s;
+
 }
 
 .card img {
@@ -116,13 +124,13 @@ nav a:hover {
 }
 
 .right-side h1 {
-    font-size: 64px;
+    font-size: 50px;
     margin-bottom: 15px;
     font-weight: 500;
 }
 
 .subtitle {
-    font-size: 25px;
+    font-size: 21px;
     margin-bottom: 30px;
     color: #6f6a63;
 }
@@ -136,7 +144,7 @@ nav a:hover {
     padding: 12px 28px;
     border-radius: 30px;
     text-decoration: none;
-    font-size: 21px;
+    font-size: 19px;
     margin-right: 15px;
     transition: 0.3s ease;
 }
@@ -164,17 +172,12 @@ nav a:hover {
     max-width: 820px;
     line-height: 1.8;
     color: #5c5751;
-    font-size: 20px;
+    font-size: 17px;
 }
-
 
 /* ===================================================== */
 /* =================== CURRÍCULO ======================= */
 /* ===================================================== */
-
-
-
-/* -------- MENU LATERAL -------- */
 
 .menu-lateral {
     width: 220px;
@@ -195,7 +198,6 @@ nav a:hover {
     font-weight: 500;
     font-size: 20px;
     color: #5c5751;
-    background: transparent;
     border-left: 4px solid transparent;
     transition: all 0.25s ease;
 }
@@ -212,12 +214,9 @@ nav a:hover {
     padding-left: 26px;
 }
 
-.menu-lateral .button {
-    margin-top: 30px;
-}
-
 .btn-download {
     display: block;
+    margin-top: 30px;
     padding: 12px 20px;
     border-radius: 18px;
     background: #6b5e52;
@@ -231,10 +230,9 @@ nav a:hover {
     background: #574c43;
 }
 
-
-
-
-/* -------- POPUP INFO -------- */
+/* ===================================================== */
+/* ======================== POPUP ====================== */
+/* ===================================================== */
 
 .info {
     display: none;
@@ -257,85 +255,24 @@ nav a:hover {
     display: block;
 }
 
-
 /* ===================================================== */
-/* =================== RESPONSIVO ====================== */
-/* ===================================================== */
-
-@media (max-width: 900px) {
-
-    .hero {
-        grid-template-columns: 1fr;
-    }
-
-    .right-side {
-        padding: 40px 25px;
-    }
-
-
-
-    .menu-lateral {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-
-    .menu-lateral ul {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-}
-
-/* ===================================================== */
-/* ============ POPUP FULLSCREEN NO CELULAR =========== */
-/* ===================================================== */
-
-@media (max-width: 600px) {
-
-    .info {
-        top: 0;
-        left: 0;
-        transform: none;
-        width: 100%;
-        height: 100%;
-        max-height: 100vh;
-        border-radius: 0;
-        padding: 30px 20px;
-    }
-
-}
-
-/* ===================================================== */
-/* =================== PROJETOS EDITORIAL ============== */
+/* =================== PROJETOS ======================== */
 /* ===================================================== */
 
 .projetos-editorial {
     max-width: 1200px;
-    margin: 40px auto 80px auto;
+    margin: 40px auto 60px;
     padding: 0 40px;
-    position: relative;
 }
-
-/* faixa bege lateral */
-
-
-
 
 .projetos-header {
     max-width: 750px;
     margin-bottom: 80px;
-    position: relative;
-    z-index: 2;
 }
 
 .projetos-header h1 {
     font-size: 52px;
     margin-bottom: 20px;
-    font-weight: 500;
 }
 
 .projetos-header p {
@@ -343,16 +280,9 @@ nav a:hover {
     color: #5c5751;
 }
 
-/* LISTA */
-
 .projetos-lista {
-    position: relative;
-    z-index: 2;
     max-width: 850px;
-    margin-right: auto;
 }
-
-/* CADA PROJETO */
 
 .projeto {
     border-top: 1px solid #d0c8be;
@@ -363,19 +293,12 @@ nav a:hover {
 .projeto-topo {
     display: flex;
     gap: 30px;
-    align-items: flex-start;
 }
 
 .numero {
     font-size: 24px;
     color: #6b5e52;
-    font-weight: 500;
     min-width: 40px;
-}
-
-.projeto h2 {
-    font-weight: 500;
-    margin-bottom: 8px;
 }
 
 .stack {
@@ -383,14 +306,11 @@ nav a:hover {
     color: #847d75;
 }
 
-/* CONTEÚDO EXPANDIDO */
-
 .projeto-conteudo {
     max-width: 700px;
     margin-left: 70px;
     margin-top: 20px;
     display: none;
-    line-height: 1.6;
     color: #5c5751;
 }
 
@@ -398,15 +318,11 @@ nav a:hover {
     display: block;
 }
 
-/* LINK */
-
 .link-projeto {
     display: inline-block;
     margin-top: 20px;
     text-decoration: none;
     color: #6b5e52;
-    font-weight: 500;
-    position: relative;
 }
 
 .link-projeto::after {
@@ -416,109 +332,20 @@ nav a:hover {
     background: #6b5e52;
     width: 0;
     transition: 0.3s;
-    margin-top: 4px;
 }
 
 .link-projeto:hover::after {
     width: 100%;
 }
 
-
-
 /* ===================================================== */
-/* ================= RESPONSIVO ======================== */
+/* =================== CONTATO ========================= */
 /* ===================================================== */
-
-@media (max-width: 900px) {
-
-    .projetos-editorial::before {
-        display: none;
-    }
-
-    .projeto-topo {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .projeto-conteudo {
-        margin-left: 0;
-    }
-
-}
-
-/* ===================================================== */
-/* =================== CONTATO ======================== */
-/* ===================================================== */
-
-.contato-hero {
-    display: grid;
-    grid-template-columns: 40% 60%;
-    max-width: 1200px;
-    margin: 40px auto;
-    padding: 0 40px;
-    gap: 40px;
-}
-
-.contato-hero .left-side {
-    background: #d8cfc4;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 40px;
-}
-
-.contato-hero .card {
-    background: #ffffff;
-    padding: 50px 40px;
-    width: 300px;
-    text-align: center;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
-    transition: 0.3s;
-}
-
-.contato-hero .card img {
-    width: 140px;
-    height: 140px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 25px;
-}
-
-.contato-hero .card h2 {
-    margin-bottom: 10px;
-    font-weight: 500;
-}
-
-.contato-hero .card-role {
-    font-size: 12px;
-    letter-spacing: 2px;
-    color: #6b5e52;
-}
-
-.contato-hero .right-side {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    padding: 60px 0;
-}
-
-.contato-hero .right-side h1 {
-    font-size: 52px;
-    margin-bottom: 15px;
-    font-weight: 500;
-}
-
-.contato-hero .subtitle {
-    font-size: 30px;
-    margin-bottom: 30px;
-    color: #6f6a63;
-}
 
 .info-contato p {
     margin-bottom: 12px;
-    font-size: 15px;
-    color: #5c5751;
     font-size: 21px;
+    color: #5c5751;
 }
 
 .info-contato a {
@@ -532,18 +359,70 @@ nav a:hover {
     text-decoration: underline;
 }
 
+/* ===================================================== */
+/* =================== RESPONSIVO ====================== */
+/* ===================================================== */
+
 @media (max-width: 900px) {
-    .contato-hero {
+
+    .hero {
         grid-template-columns: 1fr;
         padding: 0 25px;
     }
 
-    .contato-hero .right-side {
+    .right-side {
+        padding: 40px 25px;
+    }
+
+    .hero .right-side {
         padding: 40px 0;
-        
+    }
+
+    .menu-lateral {
+        width: 100%;
+        align-items: center;
+    }
+
+    .menu-lateral ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    nav a {
+        background: #635345;
+        padding: 10px 15px;
+        border-radius: 20px;
+        font-size: 16px;
+    }
+
+    .projeto-topo {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .projeto-conteudo {
+        margin-left: 0;
+        padding-right: 10px;
     }
 
     .form-contato {
         max-width: 100%;
     }
+}
+
+@media (max-width: 600px) {
+
+    .info {
+        width: 90%;
+        max-width: 400px;
+        padding: 20px;
+    }
+
 }
