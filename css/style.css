@@ -415,9 +415,6 @@ nav a:hover {
     .form-contato {
         max-width: 100%;
     }
-}
-
-@media (max-width: 600px) {
 
     .info {
         width: 90%;
@@ -425,4 +422,31 @@ nav a:hover {
         padding: 20px;
     }
 
+    header {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .logo {
+        justify-self: start;
+        text-align: left;
+    }
+
+    .logo strong {
+        display: block;
+    }
+
+    .role {
+        display: block;
+        text-align: center;
+    }
+
+    nav {
+        justify-self: center;
+    }
+
 }
+
+
