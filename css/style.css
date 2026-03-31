@@ -28,7 +28,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 25px 60px;
+    padding: 25px 25px;
     background: #6b5e52;
     border-bottom: 1px solid #f1d6a7;
 }
@@ -74,7 +74,7 @@ nav a:hover {
 .hero {
     display: grid;
     grid-template-columns: 40% 60%;
-    min-height: 100dvh;
+    min-height: 100vh;
 }
 
 .left-side {
@@ -82,7 +82,7 @@ nav a:hover {
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    padding-top: 120px;
+    padding:60px 20px;
 
 }
 
@@ -192,7 +192,7 @@ nav a:hover {
 
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 25px 60px;
+    gap: 20px 20px;
 
     justify-items: center;
     text-align: center;
@@ -409,7 +409,7 @@ nav a:hover {
     }
 
     .hero .right-side {
-        padding: 40px 0;
+        padding: 40px 30px;
     }
 
     .menu-lateral {
